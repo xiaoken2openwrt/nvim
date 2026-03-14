@@ -1,7 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	-- lazy = false,
-	event = "VeryLazy",
+  event = { "BufReadPre", "BufNewFile" },  -- 打开文件时加载
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter").setup({
