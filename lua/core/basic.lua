@@ -34,7 +34,7 @@ vim.opt.scrolloff = 5
 vim.opt.sidescrolloff = 5
 
 -- 功能
-vim.opt.undofile = true -- 启用持久撤销
+vim.opt.undofile = false -- 不启用持久撤销
 vim.opt.clipboard = "unnamedplus" -- 共享系统剪切板
 
 -- 代码折叠 (使用uof.lua的那一套配置)
