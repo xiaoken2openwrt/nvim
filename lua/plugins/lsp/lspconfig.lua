@@ -65,8 +65,8 @@ return {
 		end
 	end,
 	keys = {
-		{ "<leader>cR", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "重命名符号" },
-		{ "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "LSP 代码操作" },
+		{ "<leader>lR", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "重命名符号" },
+		{ "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "LSP 代码操作" },
 		{
 			"K",
 			function()
@@ -80,7 +80,7 @@ return {
 
 		-- 诊断相关快捷键
 		{ "<leader>D", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "诊断浮窗" },
-		{ "<leader>cd", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "打开当前行的诊断信息浮窗" },
+		{ "<leader>ld", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "打开当前行的诊断信息浮窗" },
 		{ "[d", "<cmd>lua vim.diagnostic.jump({ wrap = true, count = -1 })<cr>", desc = "上一个诊断" },
 		{ "]d", "<cmd>lua vim.diagnostic.jump({ wrap = true, count = 1 })<cr>", desc = "下一个诊断" },
 
