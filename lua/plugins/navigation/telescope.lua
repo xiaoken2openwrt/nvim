@@ -74,17 +74,17 @@ return {
 		},
 
 		-- 推荐的 LSP 查找
-		{ "<leader>cr", "<cmd>Telescope lsp_references<cr>", desc = "查找引用" },
-		{ "<leader>ci", "<cmd>Telescope lsp_implementations<cr>", desc = "查找实现" },
-		{ "<leader>cw", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "查找工作区符号" },
-		{ "<leader>cf", "<cmd>Telescope lsp_document_symbols<cr>", desc = "文件大纲" },
+		{ "<leader>lr", "<cmd>Telescope lsp_references<cr>", desc = "查找引用" },
+		{ "<leader>li", "<cmd>Telescope lsp_implementations<cr>", desc = "查找实现" },
+		{ "<leader>lw", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "查找工作区符号" },
+		{ "<leader>lf", "<cmd>Telescope lsp_document_symbols<cr>", desc = "文件大纲" },
 
 		-- LSP 调用图
-		{ "<leader>c[", "<cmd>Telescope lsp_incoming_calls<cr>", desc = "被调列表" },
-		{ "<leader>c]", "<cmd>Telescope lsp_outgoing_calls<cr>", desc = "调用列表" },
+		{ "<leader>l[", "<cmd>Telescope lsp_incoming_calls<cr>", desc = "被调列表" },
+		{ "<leader>l]", "<cmd>Telescope lsp_outgoing_calls<cr>", desc = "调用列表" },
 
 		-- 推荐的 LSP 诊断和代码动作
-		{ "<leader>ce", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "当前文件诊断" },
-		{ "<leader>cW", "<cmd>Telescope diagnostics<cr>", desc = "全局诊断" },
+		{ "<leader>le", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "当前文件诊断" },
+		{ "<leader>lW", "<cmd>Telescope diagnostics<cr>", desc = "全局诊断" },
 	},
 }
