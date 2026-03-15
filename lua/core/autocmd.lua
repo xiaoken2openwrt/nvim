@@ -58,3 +58,18 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 		end
 	end,
 })
+
+-- 高亮行尾空格
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+  desc = "高亮行尾空格",
+  pattern = "*",
+  callback = function()
+    -- 创建高亮组 (红色背景)
+    vim.cmd([[highlight ExtraWhitespace ctermbg=red guibg=#FF5555 guifg=#FFFFFF]])
+
+    -- 添加匹配模式 (只匹配行尾空格)
+    if vim.fn.exists('b:whitespace_match') == 0 then
+      vim.b.whitespace_match = vim.fn.matchadd('ExtraWhitespace', [[\s\+$]])
+    end
+  end,
+})
