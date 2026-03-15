@@ -21,6 +21,12 @@ map("n", "<leader>wJ", "<C-w>J", { silent = true, desc = "窗口移到底部" })
 map("n", "<leader>wK", "<C-w>K", { silent = true, desc = "窗口移到底部" })
 map("n", "<leader>wL", "<C-w>L", { silent = true, desc = "窗口移到右边" })
 
+-- 在终端模式下，按 Alt + 方向键 跳转到对应方向的窗口
+vim.keymap.set('t', '<A-h>', '<C-\\><C-N><C-w>h', { desc = '跳转到左侧窗口' })
+vim.keymap.set('t', '<A-j>', '<C-\\><C-N><C-w>j', { desc = '跳转到下方窗口' })
+vim.keymap.set('t', '<A-k>', '<C-\\><C-N><C-w>k', { desc = '跳转到上方窗口' })
+vim.keymap.set('t', '<A-l>', '<C-\\><C-N><C-w>l', { desc = '跳转到右侧窗口' })
+
 -- 行移动
 map("n", "<A-j>", "<cmd>m .+1<CR>==", { desc = "Move line down" })
 map("n", "<A-k>", "<cmd>m .-2<CR>==", { desc = "Move line up" })
