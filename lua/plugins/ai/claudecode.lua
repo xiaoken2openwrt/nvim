@@ -1,3 +1,4 @@
+--[[
 -- ~/.config/nvim/lua/plugins/claude-code.lua
 return {
   -- 官方推荐的 Claude Code Neovim 插件
@@ -100,4 +101,44 @@ return {
     --   -- 可以在这里添加窗口尺寸调整等逻辑
     -- end, { desc = "浮动窗口模式打开 Claude Code" })
   end,
+}
+]]
+
+return {
+  {
+    'coder/claudecode.nvim',
+    dependencies = {
+      'folke/snacks.nvim',
+    },
+    config = true,
+    opts = {
+      terminal = {
+        snacks_win_opts = {
+          wo = {
+            winblend = 100,
+            winhighlight = 'NormalFloat:MyTransparentGroup',
+          },
+        },
+      },
+    },
+    terminal = { enabled = true },
+    keys = {
+      { '<leader>c', nil, desc = 'Claude Code' },
+      { '<leader>cc', '<cmd>ClaudeCode<cr>', desc = 'Toggle Claude' },
+      { '<leader>cf', '<cmd>ClaudeCodeFocus<cr>', desc = 'Focus Claude' },
+      { '<leader>cr', '<cmd>ClaudeCode --resume<cr>', desc = 'Resume Claude' },
+      { '<leader>cC', '<cmd>ClaudeCode --continue<cr>', desc = 'Continue Claude' },
+      { '<leader>cm', '<cmd>ClaudeCodeSelectModel<cr>', desc = 'Select Claude model' },
+      { '<leader>cb', '<cmd>ClaudeCodeAdd %<cr>', desc = 'Add current buffer' },
+      { '<leader>cs', '<cmd>ClaudeCodeSend<cr>', mode = 'v', desc = 'Send to Claude' },
+      {
+        '<leader>cs',
+        '<cmd>ClaudeCodeTreeAdd<cr>',
+        desc = 'Add file',
+        ft = { 'NvimTree', 'neo-tree', 'oil', 'minifiles', 'netrw' },
+      },
+      { '<leader>ca', '<cmd>ClaudeCodeDiffAccept<cr>', desc = 'Accept diff' },
+      { '<leader>cd', '<cmd>ClaudeCodeDiffDeny<cr>', desc = 'Deny diff' },
+    },
+  },
 }
