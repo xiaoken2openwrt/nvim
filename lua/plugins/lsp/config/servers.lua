@@ -4,7 +4,17 @@
 -- NOTE: 打开Mason后，lsp列表右侧的名称即是nvim-lspconfiog的名称。
 local servers = {
 	-- C/Cpp
-	clangd = {},
+	clangd = {
+		cmd = {
+			"clangd",
+			"--background-index",
+			"--background-index-priority=normal",
+			"--limit-results=0",          -- 无限制返回结果
+			"--limit-references=100000",
+			"--all-scopes-completion",
+--			"--log=verbose",  -- 添加这一行
+		}
+	},
 	-- Rust
 	["rust_analyzer"] = {
 		settings = {
