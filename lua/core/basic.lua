@@ -13,7 +13,8 @@ vim.opt.fileformats = { "unix", "dos", "mac" }
 -- 搜索
 vim.opt.ignorecase = true -- 搜索忽略大小写
 vim.opt.smartcase = true -- 如果包含大写字符，则区分大小写
-vim.opt.hlsearch = false -- 搜索匹配不高亮
+--vim.opt.hlsearch = false -- 搜索匹配不高亮
+vim.opt.hlsearch = true -- 搜索匹配高亮
 vim.opt.incsearch = true -- 增量搜索
 
 --换行缩进
