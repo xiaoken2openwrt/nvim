@@ -65,9 +65,9 @@ return {
 				-- 在 Hunk 之间跳转：
 				-- `]c` 跳转到下一个修改块 (hunk)
 				-- 如果在 diff 模式下，则使用 Neovim 原生 `]c` 跳转到下一个更改
-				map("n", "]c", function()
+				map("n", "]h", function()
 					if vim.wo.diff then
-						vim.cmd.normal({ "]c", bang = true })
+						vim.cmd.normal({ "]h", bang = true })
 					else
 						gitsigns.nav_hunk("next")
 					end
@@ -75,9 +75,9 @@ return {
 
 				-- `[c` 跳转到上一个修改块 (hunk)
 				-- 如果在 diff 模式下，则使用 Neovim 原生 `[c` 跳转到上一个更改
-				map("n", "[c", function()
+				map("n", "[h", function()
 					if vim.wo.diff then
-						vim.cmd.normal({ "[c", bang = true })
+						vim.cmd.normal({ "[h", bang = true })
 					else
 						gitsigns.nav_hunk("prev")
 					end
